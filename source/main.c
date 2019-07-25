@@ -1,23 +1,26 @@
 /*	Author: jpica003
  *  Partner(s) Name: Jonathan Picazo
- *	Lab Section:
- *	Assignment: Lab #  Exercise #
- *	Exercise Description: [optional - include for your own benefit]
+ *	Lab Section: Summer 2019
+ *	Assignment: Final Project
+ *	Exercise Description: Pong!
  *
  *	I acknowledge all content contained herein, excluding template or example
  *	code, is my own original work.
  */
 #include <avr/io.h>
-#ifdef _SIMULATE_
-#include "simAVRHeader.h"
-#endif
-
+#include "game.h"
 int main(void) {
-    /* Insert DDR and PORT initializations */
-
-    /* Insert your solution below */
-    while (1) {
-
+	unsigned char pd;
+	// Outputs
+    DDRA = 0xFF; PORTA = 0x00;
+	DDRB = 0xFF; PORTB = 0x00;
+	DDRC = 0xFF; PORTC = 0x00;
+	//Inputs
+	DDRD = 0x00; PORTD = 0xFF; 
+	while (1) {
+     	// PORTC = 0x01; // to test out if lights work
+     	// PORTC |= 0x04;
+		pd = ~PIND;
+		startGame(pd);
     }
-    return 1;
 }
