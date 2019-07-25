@@ -1,7 +1,6 @@
 #ifndef GAME_H
 #define GAME_H
 #include <avr/io.h>
-#include <avr/interrupt.h>
 
 unsigned char input;
 unsigned short hold_countp1 = 0;
