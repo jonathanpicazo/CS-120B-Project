@@ -4,3 +4,5 @@
 Name: Jonathan Picazo
 
 SID: 862024831
+
+game.h file in /header includes all of Pong's SM and Game Logic/Physics
